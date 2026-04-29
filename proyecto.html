@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Guía estudiantil interactiva del SICOBAEM para el Colegio de Bachilleres del Estado de Michoacán — Grupo 403.">
+    <title>SICOBAEM · Guía Estudiantil 403</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Canvas de partículas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-dot"></span>SICOBAEM
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#sistema" data-section="sistema">Sistema</a></li>
+                <li><a href="#materias" data-section="materias">Materias</a></li>
+                <li><a href="#pasos" data-section="pasos">Ingreso</a></li>
+                <li><a href="#links" data-section="links">Recursos</a></li>
+                <li><a href="#faq" data-section="faq">FAQ</a></li>
+            </ul>
+            <button class="nav-burger" id="nav-burger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="hero">
+        <div class="hero-badge">
+            <img src="https://www.cobamich.edu.mx/images/2022/logo_cobaem2021.png" alt="COBAEM"
+                class="hero-cobaem-logo">
+        </div>
+        <div class="hero-content">
+            <span class="pill-tag"><i class="fas fa-satellite-dish"></i>&nbsp; Guía Estudiantil · 2026</span>
+            <h1 class="hero-title">
+                <span class="gradient-text">Consulta</span><br>SICOBAEM
+            </h1>
+            <p class="hero-sub">Sistema de Control Escolar del COBAEM — tu acceso directo, rápido y seguro a tu
+                información académica.</p>
+            <div class="hero-author">
+                <div class="author-avatar"><i class="fas fa-user-graduate"></i></div>
+                <div>
+                    <span class="author-name">Nicolás De la Cruz Hernández</span>
+                    <span class="author-group"><i class="fas fa-users"></i> Grupo 403</span>
+                </div>
+            </div>
+            <a href="#sistema" class="btn-hero">Explorar <i class="fas fa-arrow-down"></i></a>
+        </div>
+        <div class="hero-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="scroll-hint"><span></span></div>
+    </section>
+
+    <!-- ── SISTEMA ── -->
+    <section class="section" id="sistema">
+        <div class="section-inner">
+            <div class="section-label"><i class="fas fa-info-circle"></i> Acerca del sistema</div>
+            <h2 class="section-title">¿Qué es el <span class="gradient-text">SICOBAEM</span>?</h2>
+            <div class="sistema-grid">
+                <div class="sistema-text reveal">
+                    <p>El <strong>SICOBAEM</strong> es la plataforma digital oficial del COBAEM para gestionar y
+                        administrar la información escolar de su comunidad estudiantil. Diseñada con altos estándares de
+                        seguridad, permite consultar tu trayectoria académica en tiempo real.</p>
+                    <p>Su dominio es una competencia digital clave: facilita trámites administrativos, fomenta la
+                        responsabilidad académica y mantiene comunicación constante entre la institución y la comunidad
+                        escolar.</p>
+                </div>
+                <div class="stats-grid reveal">
+                    <div class="stat-card">
+                        <span class="stat-num" data-target="6">0</span>
+                        <span class="stat-label">Materias tronco básico</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num" data-target="3">0</span>
+                        <span class="stat-label">Materias TICS</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num" data-target="4">0</span>
+                        <span class="stat-label">Pasos para ingresar</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num" data-target="403">0</span>
+                        <span class="stat-label">Grupo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Funciones -->
+            <div class="features-row">
+                <div class="feat-card reveal" style="--delay:0.1s">
+                    <div class="feat-icon"><i class="fas fa-laptop-file"></i></div>
+                    <h3>Calificaciones</h3>
+                    <p>Accede a evaluaciones parciales y promedios semestrales actualizados al instante.</p>
+                </div>
+                <div class="feat-card reveal" style="--delay:0.25s">
+                    <div class="feat-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Historial Académico</h3>
+                    <p>Descarga y revisa tu kárdex digital para verificar tu avance en créditos.</p>
+                </div>
+                <div class="feat-card reveal" style="--delay:0.4s">
+                    <div class="feat-icon"><i class="fas fa-file-signature"></i></div>
+                    <h3>Reinscripción</h3>
+                    <p>Agiliza trámites institucionales y realiza tu proceso de reinscripción semestral.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MATERIAS (TABS) ── -->
+    <section class="section section-dark" id="materias">
+        <div class="section-inner">
+            <div class="section-label light"><i class="fas fa-book-open"></i> 4to Semestre</div>
+            <h2 class="section-title light">Mis <span class="gradient-text">Materias</span></h2>
+
+            <div class="tabs-wrapper reveal">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="basicas">
+                        <i class="fas fa-book"></i> Tronco Básico
+                    </button>
+                    <button class="tab-btn" data-tab="tics">
+                        <i class="fas fa-laptop-code"></i> Capacitación TICS
+                    </button>
+                    <div class="tab-indicator"></div>
+                </div>
+
+                <!-- Tab Básicas -->
+                <div class="tab-content active" id="tab-basicas">
+                    <div class="materias-grid">
+                        <div class="materia-card" style="--i:0">
+                            <div class="materia-icon"><i class="fas fa-square-root-alt"></i></div>
+                            <div class="materia-info">
+                                <h4>Temas Selectos Matemáticos</h4>
+                                <span class="materia-tag">Exactas</span>
+                            </div>
+                        </div>
+                        <div class="materia-card" style="--i:1">
+                            <div class="materia-icon"><i class="fas fa-atom"></i></div>
+                            <div class="materia-info">
+                                <h4>Física II</h4>
+                                <span class="materia-tag">Exactas</span>
+                            </div>
+                        </div>
+                        <div class="materia-card" style="--i:2">
+                            <div class="materia-icon"><i class="fas fa-leaf"></i></div>
+                            <div class="materia-info">
+                                <h4>Biología II</h4>
+                                <span class="materia-tag">Ciencias</span>
+                            </div>
+                        </div>
+                        <div class="materia-card" style="--i:3">
+                            <div class="materia-icon"><i class="fas fa-landmark"></i></div>
+                            <div class="materia-info">
+                                <h4>Conciencia Histórica I</h4>
+                                <span class="materia-tag">Humanidades</span>
+                            </div>
+                        </div>
+                        <div class="materia-card" style="--i:4">
+                            <div class="materia-icon"><i class="fas fa-book-open"></i></div>
+                            <div class="materia-info">
+                                <h4>Literatura I</h4>
+                                <span class="materia-tag">Humanidades</span>
+                            </div>
+                        </div>
+                        <div class="materia-card" style="--i:5">
+                            <div class="materia-icon"><i class="fas fa-language"></i></div>
+                            <div class="materia-info">
+                                <h4>Inglés IV</h4>
+                                <span class="materia-tag">Lenguas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab TICS -->
+                <div class="tab-content" id="tab-tics">
+                    <div class="tics-grid">
+                        <div class="tics-card reveal-left" style="--i:0">
+                            <div class="tics-num">01</div>
+                            <i class="fas fa-network-wired"></i>
+                            <h4>Mantenimiento y Redes de Cómputo</h4>
+                            <p>Fundamentos de conectividad, topologías de red, protocolos IP y soporte técnico
+                                preventivo y correctivo de equipos.</p>
+                        </div>
+                        <div class="tics-card reveal-left" style="--i:1">
+                            <div class="tics-num">02</div>
+                            <i class="fas fa-desktop"></i>
+                            <h4>Taller de Cultura Digital</h4>
+                            <p>Habilidades y responsabilidades en el entorno digital, ciudadanía tecnológica, ofimática
+                                avanzada y uso seguro de herramientas en la nube.</p>
+                        </div>
+                        <div class="tics-card reveal-left" style="--i:2">
+                            <div class="tics-num">03</div>
+                            <i class="fas fa-users-cog"></i>
+                            <h4>Comunidades Virtuales</h4>
+                            <p>Gestión responsable de entornos digitales comunitarios, administración de identidades en
+                                línea e introducción a la ciberseguridad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PASOS ── -->
+    <section class="section" id="pasos">
+        <div class="section-inner">
+            <div class="section-label"><i class="fas fa-list-ol"></i> Primer acceso</div>
+            <h2 class="section-title">¿Cómo <span class="gradient-text">ingresar</span>?</h2>
+            <div class="timeline">
+                <div class="tl-item reveal" style="--delay:0s">
+                    <div class="tl-dot"><span>1</span></div>
+                    <div class="tl-card">
+                        <i class="fas fa-id-card"></i>
+                        <h4>Ten lista tu Matrícula</h4>
+                        <p>Necesitarás tu número de matrícula escolar oficial expedida por el plantel.</p>
+                    </div>
+                </div>
+                <div class="tl-item reveal" style="--delay:0.15s">
+                    <div class="tl-dot"><span>2</span></div>
+                    <div class="tl-card">
+                        <i class="fas fa-key"></i>
+                        <h4>Conoce tu Contraseña</h4>
+                        <p>Para el primer acceso generalmente se utiliza tu CURP o fecha de nacimiento.</p>
+                    </div>
+                </div>
+                <div class="tl-item reveal" style="--delay:0.3s">
+                    <div class="tl-dot"><span>3</span></div>
+                    <div class="tl-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Resuelve el Captcha</h4>
+                        <p>Ingresa los caracteres del Captcha para validar que no eres un robot.</p>
+                    </div>
+                </div>
+                <div class="tl-item reveal" style="--delay:0.45s">
+                    <div class="tl-dot"><span>4</span></div>
+                    <div class="tl-card">
+                        <i class="fas fa-user-edit"></i>
+                        <h4>Actualiza tus Datos</h4>
+                        <p>Por seguridad, cambia tu contraseña de inmediato y añade un correo de recuperación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── RECURSOS + QR LINKS ── -->
+    <section class="section section-dark" id="links">
+        <div class="section-inner">
+            <div class="section-label light"><i class="fas fa-qrcode"></i> Accesos rápidos</div>
+            <h2 class="section-title light"><span class="gradient-text">Recursos</span> &amp; Portales</h2>
+            <p class="section-sub light">Pasa el cursor sobre cada tarjeta para ver el código QR escaneable.</p>
+
+            <div class="qr-portal-grid">
+
+                <!-- Card SICOBAEM -->
+                <div class="qr-flip-card reveal" style="--delay:0s">
+                    <div class="qr-flip-inner">
+                        <div class="qr-flip-front">
+                            <div class="qr-front-icon purple"><i class="fas fa-graduation-cap"></i></div>
+                            <h3>Portal SICOBAEM</h3>
+                            <p>Accede directamente al sistema de control escolar oficial del COBAEM.</p>
+                            <span class="flip-cta"><i class="fas fa-rotate"></i> Ver QR</span>
+                        </div>
+                        <div class="qr-flip-back purple-back">
+                            <p class="qr-back-label">ESCANEAR</p>
+                            <div class="qr-frame">
+                                <div class="qr-corner tl"></div>
+                                <div class="qr-corner tr"></div>
+                                <div class="qr-corner bl"></div>
+                                <div class="qr-corner br"></div>
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://academica.cobamich.edu.mx/sicobaem/ini&bgcolor=ffffff&color=4f46e5&qzone=1"
+                                    alt="QR SICOBAEM">
+                            </div>
+                            <a href="https://academica.cobamich.edu.mx/sicobaem/ini" target="_blank" class="qr-btn">Ir
+                                al Portal <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Mapas Mentales -->
+                <div class="qr-flip-card reveal" style="--delay:0.15s">
+                    <div class="qr-flip-inner">
+                        <div class="qr-flip-front">
+                            <div class="qr-front-icon cyan"><i class="fas fa-project-diagram"></i></div>
+                            <h3>Mapas Mentales</h3>
+                            <p>Material de apoyo visual: mapas mentales y consultorios para el estudio.</p>
+                            <span class="flip-cta"><i class="fas fa-rotate"></i> Ver QR</span>
+                        </div>
+                        <div class="qr-flip-back cyan-back">
+                            <p class="qr-back-label">ESCANEAR</p>
+                            <div class="qr-frame">
+                                <div class="qr-corner tl"></div>
+                                <div class="qr-corner tr"></div>
+                                <div class="qr-corner bl"></div>
+                                <div class="qr-corner br"></div>
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://canva.link/2ldzcaltb86cit9&bgcolor=ffffff&color=0891b2&qzone=1"
+                                    alt="QR Mapas Mentales">
+                            </div>
+                            <a href="https://canva.link/2ldzcaltb86cit9" target="_blank" class="qr-btn">Abrir <i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Webs Multimedia -->
+                <div class="qr-flip-card reveal" style="--delay:0.3s">
+                    <div class="qr-flip-inner">
+                        <div class="qr-flip-front">
+                            <div class="qr-front-icon amber"><i class="fas fa-play-circle"></i></div>
+                            <h3>Webs con Multimedia</h3>
+                            <p>Aprende cómo funcionan las webs con contenido multimedia interactivo.</p>
+                            <span class="flip-cta"><i class="fas fa-rotate"></i> Ver QR</span>
+                        </div>
+                        <div class="qr-flip-back amber-back">
+                            <p class="qr-back-label">ESCANEAR</p>
+                            <div class="qr-frame">
+                                <div class="qr-corner tl"></div>
+                                <div class="qr-corner tr"></div>
+                                <div class="qr-corner bl"></div>
+                                <div class="qr-corner br"></div>
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://canva.link/yb06vq18ezb6vfk&bgcolor=ffffff&color=d97706&qzone=1"
+                                    alt="QR Webs Multimedia">
+                            </div>
+                            <a href="https://canva.link/yb06vq18ezb6vfk" target="_blank" class="qr-btn">Abrir <i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Etnografía -->
+                <div class="qr-flip-card reveal" style="--delay:0.45s">
+                    <div class="qr-flip-inner">
+                        <div class="qr-flip-front">
+                            <div class="qr-front-icon green"><i class="fas fa-globe-americas"></i></div>
+                            <h3>Etnografía</h3>
+                            <p>Descubre qué es la Etnografía y cómo funciona en el entorno virtual.</p>
+                            <span class="flip-cta"><i class="fas fa-rotate"></i> Ver QR</span>
+                        </div>
+                        <div class="qr-flip-back green-back">
+                            <p class="qr-back-label">ESCANEAR</p>
+                            <div class="qr-frame">
+                                <div class="qr-corner tl"></div>
+                                <div class="qr-corner tr"></div>
+                                <div class="qr-corner bl"></div>
+                                <div class="qr-corner br"></div>
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://canva.link/499exu790i6emhl&bgcolor=ffffff&color=16a34a&qzone=1"
+                                    alt="QR Etnografía">
+                            </div>
+                            <a href="https://canva.link/499exu790i6emhl" target="_blank" class="qr-btn">Abrir <i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="section" id="faq">
+        <div class="section-inner">
+            <div class="section-label"><i class="fas fa-question-circle"></i> Ayuda</div>
+            <h2 class="section-title">Preguntas <span class="gradient-text">Frecuentes</span></h2>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>¿Qué hago si olvidé mi contraseña?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-a">
+                        <p>Deberás acudir de manera presencial al departamento de Control Escolar de tu plantel con tu
+                            credencial de estudiante para solicitar un restablecimiento de contraseña en el sistema.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="--delay:0.1s">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>¿Cuándo se actualizan mis calificaciones?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-a">
+                        <p>Las evaluaciones se reflejan en el sistema una vez que concluye la semana de captura oficial
+                            estipulada por la dirección en cada periodo de evaluación parcial o semestral.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="--delay:0.2s">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>¿El historial académico sirve para trámites externos?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-a">
+                        <p>El Kárdex digital es oficial con validez interna. Para trámites como becas o revalidaciones
+                            externas, a menudo requerirás el sello y firma física original del plantel.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="--delay:0.3s">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>¿Qué navegadores son recomendados?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-a">
+                        <p>Se recomienda utilizar navegadores actualizados como Chrome, Firefox o Edge para una mejor
+                            experiencia y compatibilidad con el sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#0a0a0f" />
+            </svg>
+        </div>
+        <div class="footer-inner">
+            <div class="footer-logo"><span class="logo-dot"></span>SICOBAEM</div>
+            <p class="footer-sub">Nicolás De la Cruz Hernández · Grupo 403 · COBAEM 2026</p>
+            <p class="footer-note">Trabajo escolar de carácter demostrativo e informativo. No sustituye al portal
+                oficial de la institución.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
